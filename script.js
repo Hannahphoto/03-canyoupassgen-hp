@@ -1,17 +1,38 @@
+
+// WHEN all prompts are answered
+// THEN a password is generated that matches the selected criteria
+// WHEN the password is generated
+// THEN the password is either displayed in an alert or written to the page
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var userInput = function (){
+  randomUppercase = document.getElementsByID("upper");
+  randomLowercase = document.getElementsByID("lower");
+  randomNumbers = document.getElementsByID("number");
+  randomspecChar = document.getElementsByID("secChar");
 
+  // if(userInput = randomLowercase){
+    // (userInput)+(getPasswordLength)= passwordCriteria
+  // }
 
-var userInput = () => {
-  if(randomUppercase)
-  if(randomLowercase)
-  if(randomNumbers)
-  if(randomspecChar)
-  console.log = password
+  // if(UPPERCASECHAR === randomUppercase)
+  // {}
 }
 
+// var passwordCriteria = userInput ();
+// var userInput = () => password
+// 
+  // if(uppercase)
+  // if(lowercase)
+  // if(numbers)
+  // if(specChar)
+  
 
+// / THEN my input should be validated and at least one character type should be 
+// / selected
 
 var UPPERCASECHAR = function() {"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"}
 var randomUppercase = UPPERCASECHAR(Math.floor(Math.random() * UPPERCASECHAR.length));
@@ -55,29 +76,14 @@ var specChar = window.confirm("Click OK for your password to contain a special c
 console.log(`length: ${charlength}\n numbers:${numbers}\n lowercase:${lowercase}\n uppercase: ${uppercase}\n specChar: ${specChar}`)
 
 var passwordCriteria = '';
-
-
-if(numbers) {
-  console.log('user wants numbers');
-}
-if(lowercase){
-  console.log("lowercase valid")
-}
-if(uppercase){
-
-}
-if(specChar){
-
-}
-// if(!confirm)
-// return;
-// if (confirm)
-  // writePassword
-// return "";
-// 
 }
 
 
+// if(generatePassword === userInput){
+  // console.log(password)}
+// else{
+  // console.log("Missing requirements for password")
+// };
 
 // 
 // Write password to the #password input
@@ -93,35 +99,5 @@ function writePassword() {
 // 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
-
-
-
-
-
-
-
-  // const length = +lengthEl.value;
-  // const hasLower = lowercaseEl.value;
-  // const hasUpper = uppercaseEl.value;
-  // const hasNumber = numbersEl.value;
-  // const hasSymbol = symbolsEl.value;
-
-  // resultEl.innertext = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, length)
-
-// });
-
-
-
-// function = validate(){}
-// const resultEl = document.getElementById("result");
-// const lengthEl = document.getElementById("length");
-// const lowercaseEl = document.getElementById("lowercase");
-// const uppercaseEl = document.getElementById("uppercase");
-// const numbersEl = document.getElementById("numbers");
-// const symbolsEl = document.getElementById("symbols");
-// const generateEl = document.getElementById("generate");
-// 
-// const passRulesFunc = {
-  // lower: getRandomLower, upper: getRandomUpper, number: getRandomNumber, symbol: getRandomSymbol
-// };
+// return document.userInput
 // 
