@@ -1,37 +1,29 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// variables for length- THEN I am presented with a series of prompts for
-// password criteria. 
-//promt user for 
-
-// function = validate(){}
-// const resultEl = document.getElementById("result");
-// const lengthEl = document.getElementById("length");
-// const lowercaseEl = document.getElementById("lowercase");
-// const uppercaseEl = document.getElementById("uppercase");
-// const numbersEl = document.getElementById("numbers");
-// const symbolsEl = document.getElementById("symbols");
-// const generateEl = document.getElementById("generate");
-// 
-// const passRulesFunc = {
-  // lower: getRandomLower, upper: getRandomUpper, number: getRandomNumber, symbol: getRandomSymbol
-// };
-// 
 
 
-var UPPERCASECHAR ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  return UPPERCASECHAR(Math.floor(Math.random));
+var userInput = () => {
+  if(randomUppercase)
+  if(randomLowercase)
+  if(randomNumbers)
+  if(randomspecChar)
+  console.log = password
+}
 
-var lowercase = "abcdefghijklmnopqrstuvwzyz";
-return lowercase(Math.floor(Math.random));
 
-var numbers = "0123456789";
-  return numbers(Math.floor(Math.random));
 
-var specChar = "!@#$%^&*(){}[]=<>/;"
-  return specChar(Math.floor(Math.random));
+var UPPERCASECHAR = function() {"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"}
+var randomUppercase = UPPERCASECHAR(Math.floor(Math.random() * UPPERCASECHAR.length));
 
+var lowercaseChar = function(){ "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,z,y,z"}
+var randomLowercase = lowercaseChar(Math.floor(Math.random()* lowercaseChar.length));
+
+var numbersChar = function(){"0,1,2,3,4,5,6,7,8,9"}
+var randomNumbers = numbersChar(Math.floor(Math.random()*numbersChar.length));
+
+var specCharChar = function() {"!,@,#,$,%,^,&,*,(,),{,},[,],=,<,>,/,;"}
+var randomspecChar = specCharChar(Math.floor(Math.random()*specCharChar.length));
 
 
 function generatePassword()
@@ -95,28 +87,19 @@ function writePassword() {
   
   passwordText.value = password;
 
-  // for (password){
-    // [Math.floor(Math.random)]
   }
 
-
-// 
-
-// let generatePassword = '';
-// const typesCount = lower + upper + number + symbol;
-// const typesArr = [{lower}, {upper}, {number}, {symbol}]
-// 
-// for(let i = 0; i < length; i += typesCount){
-  // typesArr.forEach(type => {
-  // const passRulesFunc = Object.keys(type [0])
-  // console.log("passRulesFunc", passRulesFunc);
-  // 
-  // generatePassword += passRulesFunc;
-  // })
 // }
 // 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword)
+
+
+
+
+
+
+
   // const length = +lengthEl.value;
   // const hasLower = lowercaseEl.value;
   // const hasUpper = uppercaseEl.value;
@@ -129,3 +112,16 @@ generateBtn.addEventListener("click", writePassword)
 
 
 
+// function = validate(){}
+// const resultEl = document.getElementById("result");
+// const lengthEl = document.getElementById("length");
+// const lowercaseEl = document.getElementById("lowercase");
+// const uppercaseEl = document.getElementById("uppercase");
+// const numbersEl = document.getElementById("numbers");
+// const symbolsEl = document.getElementById("symbols");
+// const generateEl = document.getElementById("generate");
+// 
+// const passRulesFunc = {
+  // lower: getRandomLower, upper: getRandomUpper, number: getRandomNumber, symbol: getRandomSymbol
+// };
+// 
