@@ -9,10 +9,11 @@
 var generateBtn = document.querySelector("#generate");
 
 var userInput = function (){
-  randomUppercase = document.getElementsByID("upper");
-  randomLowercase = document.getElementsByID("lower");
-  randomNumbers = document.getElementsByID("number");
-  randomspecChar = document.getElementsByID("secChar");
+  randomUppercase
+  randomLowercase
+  randomNumbers 
+  randomspecChar
+}
 
   // if(userInput = randomLowercase){
     // (userInput)+(getPasswordLength)= passwordCriteria
@@ -20,7 +21,7 @@ var userInput = function (){
 
   // if(UPPERCASECHAR === randomUppercase)
   // {}
-}
+
 
 // var passwordCriteria = userInput ();
 // var userInput = () => password
@@ -34,21 +35,22 @@ var userInput = function (){
 // / THEN my input should be validated and at least one character type should be 
 // / selected
 
-var UPPERCASECHAR = function() {"A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"}
-var randomUppercase = UPPERCASECHAR(Math.floor(Math.random() * UPPERCASECHAR.length));
+var UPPERCASECHAR = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+// var randomUppercase = uppercase(Math.floor(Math.random() * UPPERCASECHAR.length));
 
-var lowercaseChar = function(){ "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,z,y,z"}
-var randomLowercase = lowercaseChar(Math.floor(Math.random()* lowercaseChar.length));
+var lowercaseChar = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","z","y","z"]
+// var randomLowercase = generatePassword(Math.floor(Math.random()* lowercaseChar.length));
+// 
+var numbersChar = ["0","1","2","3","4","5","6","7","8","9"]
+// var randomNumbers = generatePassword(Math.floor(Math.random()*numbersChar.length));
 
-var numbersChar = function(){"0,1,2,3,4,5,6,7,8,9"}
-var randomNumbers = numbersChar(Math.floor(Math.random()*numbersChar.length));
-
-var specCharChar = function() {"!,@,#,$,%,^,&,*,(,),{,},[,],=,<,>,/,;"}
-var randomspecChar = specCharChar(Math.floor(Math.random()*specCharChar.length));
+var specCharChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=","<",">","/",";"]
+// var randomspecChar = generatePassword(Math.floor(Math.random()*specCharChar.length));
 
 
 function generatePassword()
 {
+  // getPasswordLength is done-
   var getPasswordLength = () => {
     var length = window.prompt("How many characters will your password contain?")
     var MIN = 8;
@@ -56,7 +58,7 @@ function generatePassword()
     if(parseInt(length) && (length >= MIN && length <= MAX)){
         return parseInt(length);
     }
-    getPasswordLength();
+    return getPasswordLength();
   };
 
 var charlength = getPasswordLength();
@@ -75,7 +77,21 @@ var specChar = window.confirm("Click OK for your password to contain a special c
 
 console.log(`length: ${charlength}\n numbers:${numbers}\n lowercase:${lowercase}\n uppercase: ${uppercase}\n specChar: ${specChar}`)
 
-var passwordCriteria = '';
+var passwordCriteria = [];
+if(numbers){
+  passwordCriteria = passwordCriteria.concat(numbersChar)
+}
+// if(lowercase)
+// TO DO
+var password = ""
+
+for(var i = 0; i<charlength; i++){
+  password += passwordCriteria[Math.floor(Math.random() * passwordCriteria.length)]
+  console.log (i);
+}
+return password
+
+
 }
 
 
