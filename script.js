@@ -85,13 +85,13 @@ else {
   window.confirm("Selecting a number is required to generate the password.")
 }
 if(lowercase){
-  passwordCriteria = passwordCriteria.concat(lowercase)
+  passwordCriteria = passwordCriteria.concat(lowercaseChar)
 }
 else {
   window.confirm("Selecting an lowercase letter required to generate the password.")
 }
 if(uppercase){
-  passwordCriteria = passwordCriteria.concat(uppercase)
+  passwordCriteria = passwordCriteria.concat(UPPERCASECHAR)
 }
 else {
   window.confirm("Selecting an uppercase letter is required to generate the password.")
@@ -106,7 +106,7 @@ else {
 
 var password = "";
 
-for(var i = 0; i<charlength; i<numbers; i<lowercase; i<uppercase; i<specChar; i++){
+for(var i = 0; i<charlength; i++){
   password += passwordCriteria[Math.floor(Math.random() * passwordCriteria.length)]
   console.log (i);
 
