@@ -81,25 +81,54 @@ var passwordCriteria = [];
 if(numbers){
   passwordCriteria = passwordCriteria.concat(numbersChar)
 }
+else {
+  window.confirm("Selecting a number is required to generate the password.")
+}
 if(lowercase){
   passwordCriteria = passwordCriteria.concat(lowercase)
+}
+else {
+  window.confirm("Selecting an lowercase letter required to generate the password.")
 }
 if(uppercase){
   passwordCriteria = passwordCriteria.concat(uppercase)
 }
+else {
+  window.confirm("Selecting an uppercase letter is required to generate the password.")
+}
 if(specChar){
   passwordCriteria = passwordCriteria.concat(specCharChar)
 }
-// if(lowercase)
-// TO DO
+else {
+  window.confirm("Selecting a special character is required to generate the password")
+  return "";
+}
+
 var password = "";
 
-for(var i = 0; i<charlength; i++){
+for(var i = 0; i<charlength; i<numbers; i<lowercase; i<uppercase; i<specChar; i++){
   password += passwordCriteria[Math.floor(Math.random() * passwordCriteria.length)]
   console.log (i);
+
+  //  for(var i = 0; i<uppercase; i++){
+    // password += passwordCriteria[Math.floor(Math.random() * passwordCriteria.length)]
+    // console.log (i);
 }
+// i=numbers, i=lowercase, i=uppercase,
+
+
 return password
 
+// for(var i = 0; i<numbers; i++){
+  // password += passwordCriteria[Math.floor(Math.random() * passwordCriteria.length)]
+  // console.log (i);
+// }
+// 
+// for(var i = 0; i<lowercase; i++){
+  // password += passwordCriteria[Math.floor(Math.random() * passwordCriteria.length)]
+  // console.log (i);
+// }
+// 
 
 }
 
