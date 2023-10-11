@@ -8,12 +8,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-var userInput = function (){
-  randomUppercase
-  randomLowercase
-  randomNumbers 
-  randomspecChar
-}
+// var userInput = function (){
+  // randomUppercase
+  // randomLowercase
+  // randomNumbers 
+  // randomspecChar
+// }
 
   // if(userInput = randomLowercase){
     // (userInput)+(getPasswordLength)= passwordCriteria
@@ -81,9 +81,18 @@ var passwordCriteria = [];
 if(numbers){
   passwordCriteria = passwordCriteria.concat(numbersChar)
 }
+if(lowercase){
+  passwordCriteria = passwordCriteria.concat(lowercase)
+}
+if(uppercase){
+  passwordCriteria = passwordCriteria.concat(uppercase)
+}
+if(specChar){
+  passwordCriteria = passwordCriteria.concat(specCharChar)
+}
 // if(lowercase)
 // TO DO
-var password = ""
+var password = "";
 
 for(var i = 0; i<charlength; i++){
   password += passwordCriteria[Math.floor(Math.random() * passwordCriteria.length)]
