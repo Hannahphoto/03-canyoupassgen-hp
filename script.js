@@ -1,4 +1,5 @@
 // Assignment Code
+// WHEN I click the button to generate a password
 var generateBtn = document.querySelector("#generate");
 
 // var userInput = function (){
@@ -41,9 +42,10 @@ var specCharChar = ["!","@","#","$","%","^","&","*","(",")","{","}","[","]","=",
 // var randomspecChar = generatePassword(Math.floor(Math.random()*specCharChar.length));
 
 
+// THEN I am presented with a series of prompts for password criteria
 function generatePassword()
 {
-  // getPasswordLength is done-
+  // getPasswordLength is done-THEN I choose a length of at least 8 characters and no more than 128 characters
   var getPasswordLength = () => {
     var length = window.prompt("How many characters will your password contain? Must be more than 8 and less than 128.")
     var MIN = 8;
@@ -53,7 +55,8 @@ function generatePassword()
     }
     return getPasswordLength();
   };
-
+  // THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+  // WHEN I answer each prompt
 var charlength = getPasswordLength();
 // if (!prompt)
 // return;
