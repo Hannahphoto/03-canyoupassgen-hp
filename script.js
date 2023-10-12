@@ -1,10 +1,3 @@
-
-// WHEN all prompts are answered
-// THEN a password is generated that matches the selected criteria
-// WHEN the password is generated
-// THEN the password is either displayed in an alert or written to the page
-
-
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -52,7 +45,7 @@ function generatePassword()
 {
   // getPasswordLength is done-
   var getPasswordLength = () => {
-    var length = window.prompt("How many characters will your password contain?")
+    var length = window.prompt("How many characters will your password contain? Must be more than 8 and less than 128.")
     var MIN = 8;
     var MAX = 128;
     if(parseInt(length) && (length >= MIN && length <= MAX)){
@@ -64,7 +57,7 @@ function generatePassword()
 var charlength = getPasswordLength();
 // if (!prompt)
 // return;
-var numbers = window.confirm("Click OK for your password to contain numbers")
+var numbers = window.confirm("Click OK for your password to contain numbers.")
 // if (!confirm)
 // return;
 var lowercase = window.confirm("Click OK for your password to contain a lowercase letter.")
